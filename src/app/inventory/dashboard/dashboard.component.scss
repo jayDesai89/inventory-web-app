@@ -1,0 +1,38 @@
+.dashboard {
+  .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 0;
+  }
+  .parts-data {
+    margin-top: 1%;
+
+    table {
+      .in-stock {
+        display: flex;
+        flex-direction: column;
+        .stock-btn{
+          .action-btn{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .save-btn {
+            div {
+              padding: 3% 0;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

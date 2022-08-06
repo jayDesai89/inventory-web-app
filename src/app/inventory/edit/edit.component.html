@@ -1,0 +1,64 @@
+<div class="container">
+  <legend>Update existing Part</legend>
+  <div class="mb-3">
+    <label for="txtPartName" class="form-label">Part Name</label>
+    <input
+      type="text"
+      [(ngModel)]="partForm.name"
+      class="form-control"
+      id="txtPartName"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="txtCost" class="form-label">Cost</label>
+    <input
+      type="number"
+      [(ngModel)]="partForm.cost"
+      class="form-control"
+      id="txtCost"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="txtPartNumber" class="form-label">Part Number</label>
+    <input
+      type="text"
+      [(ngModel)]="partForm.partNumber"
+      class="form-control"
+      id="txtCost"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="txtinStock" class="form-label">In-Stock quantity</label>
+    <input
+      type="number"
+      [(ngModel)]="partForm.inStock"
+      class="form-control"
+      id="txtinStock"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="txtDescription" class="form-label">Description</label>
+    <input
+      type="text"
+      [(ngModel)]="partForm.description"
+      class="form-control"
+      id="txtDescription"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="txtNotes" class="form-label">Notes</label>
+    <input
+      type="text"
+      [(ngModel)]="partForm.notes"
+      class="form-control"
+      id="txtNotes"
+    />
+  </div>
+
+  <section>
+    <div class="btn-div d-flex">
+      <div><button type="button" class="btn btn-dark" (click)="updatePart()">Create</button></div>
+      <div><button type="button" class="btn btn-dark" [routerLink]="'/'">Cancel</button></div>
+    </div>
+  </section>
+</div>

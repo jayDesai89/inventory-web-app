@@ -1,0 +1,81 @@
+<section class="dashboard">
+  <!-- Dashboard - header -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="header">
+            <div>
+              <h1>Inventory</h1>
+            </div>
+            <div>
+              <a type="button" routerLink="/add" class="btn btn-dark">Add A New Part</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Dashboard - Body/ Table section -->
+  <section>
+    <div class="container parts-data">
+      <div class="row">
+        <div class="col">
+          <div>
+            <table class="table table-hover">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col" class="text-center">#</th>
+                  <th scope="col" class="text-left">Name</th>
+                  <th scope="col" class="text-center">Number</th>
+                  <th scope="col col-md-0" class="text-center">Cost</th>
+                  <th scope="col" class="text-center">In-stock</th>
+                  <th scope="col" class="text-center"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let part of parts$| async ; index as i">
+                  <td scope="row" class="text-center">{{i+1}}</td>
+                  <td class="text-left">{{part.name}}</td>
+                  <td class="text-center">{{part?.partNumber}}</td>
+                  <td class="text-center col-md-0">{{part?.cost}}</td>
+                  <td class="text-center">
+                    <div class="in-stock">
+                      {{part?.inStock}}
+                      <div class="stock-btn">
+                        <div class="action-btn" *ngIf="enableEditIndex != i">
+                          <button type="button" class="btn btn-secondary" (click)="receivePart(part.id,i);">
+                            <img src="../../../assets/icons/plus-lg.svg" alt="receiving">
+                          </button>
+                          <button type="button" class="btn btn-secondary" (click)="consumePart(part.id,i);">
+                            <img src="../../../assets/icons/dash-lg.svg" alt="consuming">
+                          </button>
+                        </div>
+
+                        <div class="save-btn" *ngIf="enableEditIndex == i">
+                          <input type="number" [(ngModel)]="inStockQuantity" class="form-control" id="txtinStock" />
+                          <div>
+                            <button type="button" class="btn btn-secondary"
+                              (click)="updateInStock(part.id)">{{anything}}</button>
+                            <button type="button" class="btn btn-secondary" (click)="closeField()">Cancel</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-center"> <a [routerLink]="['/edit', part.id]" class="btn btn-dark">Edit</a></td>
+                </tr>
+              </tbody>
+              <div>
+              </div>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</section>

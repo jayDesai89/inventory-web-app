@@ -1,0 +1,39 @@
+{
+  "parts": [
+    {
+      "name": "wingBlade1",
+      "id": 1,
+      "description": "left-wing part 1",
+      "Comments": "Comment 1",
+      "in-stock": "10"
+    },
+    {
+      "name": "wingBlade2",
+      "id": 2,
+      "description": "right-wing part 2",
+      "Comments": "Comment 2",
+      "in-stock": "20"
+    },
+    {
+      "name": "wingBlade3",
+      "id": 3,
+      "description": "left-wing part 3",
+      "Comments": "Comment 3",
+      "in-stock": "30"
+    },
+    {
+      "name": "wingBlade4",
+      "id": 4,
+      "description": "left-wing part 4",
+      "Comments": "Comment 4",
+      "in-stock": "40"
+    },
+    {
+      "name": "wingBlade5",
+      "id": 5,
+      "description": "left-wing part 5",
+      "Comments": "Comment 5",
+      "in-stock": "50"
+    }
+  ]
+}
